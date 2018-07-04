@@ -13,7 +13,7 @@ export default class MovieDetailComponent extends React.Component{
 		}	
 	}
 	//根据当前父组件传递的id来获取电影的详情数据
-	componentWillMount(){
+	componentDidMount(){
 		fly.request('movie/subject/'+this.props.id,{},{
 			method:"get",
 			timeout:5000 //超时设置为5s

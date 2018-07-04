@@ -16,7 +16,7 @@ export default class MovieListComponent extends React.Component{
 	_extraUniqueKey(item ,index){
       return item.id
    }
-	componentWillMount(){
+    componentDidMount(){
 		fly.request('movie/'+this.props.movieType,{},{
 			method:"get",
 			timeout:5000 //超时设置为5s
